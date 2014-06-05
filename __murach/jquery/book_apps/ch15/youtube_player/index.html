@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>YouTube JSON API : Display Inline Video Player</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">	
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script>
+		$.support.cors = true;
+		$(document).ready(function() {
+			// Handle the search button's click event
+			$("#btnSearch").click(function() {
+				// Reset the div elements in case a second search is made
+				$("#youtube").html("");
+				$("#video").html("");				
+
+				// Set the channel for the videos
+				var channel = $("#channel").val();
+				
+				// Build the custom YouTube URL based on the channel and number of videos
+				var channelUrl = "http://gdata.youtube.com/feeds/api/users/" + channel + "/uploads?max-results=5&alt=json";
+				
+				$.getJSON(channelUrl, function(data) {
+					// Loop through each feed entry
+					$.each(data.feed.entry, function(i,item) {
+						// Extract the video player URL
+						var url = item.media$group.media$content[0].url
+						// Get the title of the video
+						var title = item.title.$t;
+						// Get the first 10 characters of date video was published or: YYYY-MM-DD
+						var datepublished = item.published.$t.substring(0, 10);
+						// Get the author name
+						var author = item.author[0].name.$t;
+						// Create the HTML that links to the video
+						var text = 
+							"<h3><a href='#' title='" + url + "'>" + title + "</a></h3>" +
+							"<p>Published: " + datepublished + " by " + author + "</p><br>";
+						
+						// Append string to the div for display
+						$("#youtube").append(text);
+					});
+					
+					$("a").click(function() {
+						$("#video").html("");					
+						// Get the URL for the link that was clicked
+						var url = $(this).attr("title");
+						// Create an inline video player for the URL					
+						var text = 
+							"<object width='425' height='344'>" + 
+							"<param name='movie' value='" + url + "'></param>" +
+							"<param name='allowFullScreen' value='true'></param>" + 
+							"<embed src='" + url + "' type='application/x-shockwave-flash' allowfullscreen='true' width='425' height='344'></embed>" +
+							"</object>";
+						// Append string to div for display
+						$("#video").append(text);					
+					});								
+				});
+			});
+		});
+	</script>
+</head>
+	
+<body>
+	<section>
+		<div id="search_list">
+    		Search by Channel: <input type="text" size="30" id="channel">
+    		<input type="button" value="Search" id="btnSearch"><br><br>	
+    		<div id="youtube"></div>
+		</div>
+    	<div id="video"></div>
+    	<footer></footer>
+
+	</section>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Draggable and Droppable interactions</title>
+    <!-- jQuery UI style sheet reference. Smoothness is the theme used. -->
+    <link href="css/smoothness/jquery-ui-1.8.23.custom.css" type="text/css" rel="stylesheet">
+	<!-- Normal style sheet used for layout and general formatting. -->
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <!-- HTML5 shim/shiv for HTML5 section element backward compatibility. -->
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <!-- jQuery library reference. Latest is always referenced from jQuery's CDN. -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <!-- jQuery UI JavaScript library reference. -->
+    <script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+    <!-- jQuery call to the accordion() method. -->
+	<script>
+    	$(document).ready(function() {
+            $("#vprospect, #vconvert, #vretain").draggable({
+            	cursor: "move"
+            });
+            $("#cart").droppable({
+                drop: function() {
+                    $(this).addClass("ui-state-highlight").find("p").html("vSolution added!");
+                }
+            });
+        });
+    </script>
+</head>
+	
+<body>
+	<section>       
+		<h2>Add to Cart</h2>
+        <p>Drag a software box to add it to the cart.</p>
+			
+        <div id="vprospect"><img src="images/vprospect.png"></div>
+        <div id="vconvert"><img src="images/vconvert.png"></div>
+        <div id="vretain"><img src="images/vretain.png"></div>
+        <div id="cart"><p>Your Cart</p></div>
+	</section>
+</body>
+</html>

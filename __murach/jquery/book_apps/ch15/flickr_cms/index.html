@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Vecta Corp.</title>
+    <!-- Normal style sheet used for layout and general formatting. -->
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <!-- HTML5 shim/shiv for HTML5 section element backward compatibility. -->
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <!-- jQuery library reference. Latest is always referenced from jQuery's CDN. -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var url = "http://api.flickr.com/services/feeds/photos_public.gne?id=82407828@N07&format=json&jsoncallback=?&tags=vectacorp";
+		
+			$.getJSON(url, function(data) {
+				var html = "";
+			
+				$.each(data.items, function(i, item){	
+					html += "<h3>" + item.title + "</h3>";
+					html += item.description;
+					html = html.replace("<p><a href=\"http://www.flickr.com/people/82407828@N07/\">zakruvalcaba<\/a> posted a photo:<\/p>", "");
+				});
+			
+				$("#team").html(html);
+			});	
+		});
+    </script>
+</head>
+
+<body>
+<section id="container">
+    <header></header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <section id="content">
+        <h2>The Vecta Corp. Management Team</h2>
+        
+		<div id="team"></div>
+    </section>
+    
+    <footer></footer>
+</section>
+</body>
+</html>

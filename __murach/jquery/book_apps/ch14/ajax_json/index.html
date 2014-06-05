@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Vecta Corp.</title>
+    <!-- Normal style sheet used for layout and general formatting. -->
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <!-- HTML5 shim/shiv for HTML5 section element backward compatibility. -->
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <!-- jQuery library reference. Latest is always referenced from jQuery's CDN. -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$.ajax({
+				type: "get",
+				url: "team.json",
+				beforeSend: function() {
+					$("#team").html("Loading...");
+				},
+				timeout: 10000,
+				error: function(xhr, status, error) {
+					alert("Error: " + xhr.status + " - " + error);
+				},
+				dataType: "json",
+				success: function(data) {
+					$("#team").html("");
+					$.each(data, function() {
+			    		$.each(this, function(key, value) {
+							$("#team").append(
+								"Name: " + value.name + "<br>" + 
+								"Title: " + value.title + "<br>" + 
+								"Bio: " + value.bio + "<br><br>"
+							);
+						});
+					});
+				}
+			});
+		});
+    </script>
+</head>
+
+<body>
+<section id="container">
+    <header></header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <section id="content">
+        <h2>The Vecta Corp. Management Team</h2>
+
+		<div id="team"></div>
+    </section>
+    
+    <footer></footer>
+</section>
+</body>
+</html>

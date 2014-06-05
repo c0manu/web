@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>YouTube JSON API : Display by Channel</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script>
+		$.support.cors = true;		
+		$(document).ready(function(){
+			// The YouTube URL that retrieves the 5 latest Microsoft videos
+			var url = "http://gdata.youtube.com/feeds/api/users/microsoft/uploads?max-results=5&alt=json";
+			$.getJSON(url, function(data) {
+				// Loop through each feed entry
+				$.each(data.feed.entry, function(i,item) {
+					// Get the URL for the video
+					var url = item.link[0].href;
+					// Get the title of the video
+					var title = item.title.$t;
+					// Get the first 10 characters of date video was published or: YYYY-MM-DD
+					var datepublished = item.published.$t.substring(0, 10);
+					// Get the author name
+					var author = item.author[0].name.$t;
+					// Construct the display for the video
+					var text = 					
+						"<a href='" + url + "'>" + title + "</a><br>" +
+						"Published: " + datepublished + " by " + author + "<br><br>";
+					// Append text string to the div for display
+					$("#youtube").append(text);
+				});
+			});
+		});
+	</script>
+</head>
+	
+<body>   
+	<div id="youtube"></div>
+</body>
+</html>

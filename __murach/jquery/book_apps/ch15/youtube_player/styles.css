@@ -1,0 +1,32 @@
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 896px;
+	margin: 0 auto;
+	padding: 15px 25px;
+	border: 3px solid blue;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	margin-bottom: .2em;
+}
+a:link, a:visited {
+	color: blue;
+}
+#search_list {
+	width: 450px;	
+	float: left;
+}
+#video {
+	width: 425px;
+	float: left;
+}
+footer {
+	clear: both;
+}

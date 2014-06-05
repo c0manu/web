@@ -1,0 +1,23 @@
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 87.5%;
+	width: 500px;
+	margin: 0 auto;
+}
+section {
+	padding: 15px 25px;
+}
+label {
+	float: left;
+	width: 125px;
+}
+#progressbar {
+	float: right;
+}

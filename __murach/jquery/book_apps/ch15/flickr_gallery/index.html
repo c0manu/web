@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Vecta Corp.</title>
+    <!-- Normal style sheet used for layout and general formatting. -->
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <!-- Reference to the Lightbox CSS. -->
+    <link href="lightbox.css" type="text/css" rel="stylesheet">
+    <!-- HTML5 shim/shiv for HTML5 section element backward compatibility. -->
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <!-- jQuery library reference. Latest is always referenced from jQuery's CDN. -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <!-- Reference to the Lightbox plugin. -->
+    <script type="text/javascript" src="js/lightbox.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var url = "http://api.flickr.com/services/feeds/photos_public.gne?id=82407828@N07&format=json&jsoncallback=?&tags=vectacorpbuilding";
+
+			$.getJSON(url, function(data){
+				var html = "";
+			
+				$.each(data.items, function(i, item){	
+					html += "<a href=" + item.media.m + " title=" + item.title + " rel=lightbox[vecta]>";
+					html += "<img src=" + item.media.m + " width=120 height=100>";
+					html += "</a>";
+				});
+			
+				$('#newbuilding').html(html);
+			});	
+		});
+    </script>
+</head>
+
+<body>
+<section id="container">
+    <header></header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <section id="content">
+        <h2>About Us</h2>
+        <p> On June 6th, 2012, Vecta Corp. moved into its new 4 story, 35,000 square foot facilty. Below are a few pictures of the new facility. </p>
+		<div id="newbuilding"></div>
+  </section>
+    
+    <footer></footer>
+</section>
+</body>
+</html>

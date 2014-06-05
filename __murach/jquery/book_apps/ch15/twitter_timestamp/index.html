@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Twitter JSON API : Setting a Tweet Timestamp</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">	
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script>
+        $(document).ready(function(){
+			var url = "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=Microsoft&count=5&include_rts=1&callback=?";
+			var tweet = "";
+			
+			$.getJSON(url, function(data) {		
+				$.each(data, function(i,item) {
+					tweet += convertUrlToLink(item.text) + "<br>" + 
+							 formatTime(item.created_at) + "<br><br>";
+				});
+				$("#twitter").html("<h3>Microsoft&rsquo;s Twitter Feed</h3>").append(tweet);
+			});
+			
+			function convertUrlToLink(text) {
+				var exp = /(\b(https?):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/i;
+				return text.replace(exp,"<br><a href='$1'>$1</a>");  
+			}
+		
+			// function to calculate how long ago the tweet was posted
+			function formatTime(tweetDateTime) {
+				// to make this work with IE
+			    var dateTimeString = tweetDateTime.substr(4, 7) +
+                                     tweetDateTime.substr(26) +
+                                     tweetDateTime.substr(10, 15);
+                                     
+			    // create date object for tweet date and time
+			    var tweetDate = new Date(dateTimeString);				
+												
+				// get tweet date in milliseconds
+				var tweetTime = tweetDate.getTime();
+				
+				// get current date in milliseconds
+				var currentTime = new Date().getTime();
+				
+				// subtract tweet date from current in milliseconds
+				// and divide by 1000 to get the difference in seconds
+				var timeago = parseInt((currentTime - tweetTime) / 1000);
+				   
+			
+				// display message based on number of seconds since the tweet was created
+				if 		(timeago < (1*60)) 		return "less than a minute ago";
+				else if	(timeago < (2*60)) 		return "about a minute ago";
+				else if	(timeago < (45*60)) 	return (parseInt(timeago / 60)).toString() + " minutes ago";
+				else if	(timeago < (90*60)) 	return "about an hour ago";
+				else if	(timeago < (24*60*60)) 	return "about " + (parseInt(timeago / 3600)).toString() + " hours ago";
+				else if	(timeago < (48*60*60)) 	return "1 day ago";
+				else 							return (parseInt(timeago / 86400)).toString() + " days ago";
+			}
+        });
+    </script>
+</head>
+	
+<body>
+	<div id="twitter"></div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Selectable interaction</title>
+    <!-- jQuery UI style sheet reference. Smoothness is the theme used. -->
+    <link href="css/smoothness/jquery-ui-1.8.23.custom.css" type="text/css" rel="stylesheet">
+	<!-- Normal style sheet used for layout and general formatting. -->
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <!-- HTML5 shim/shiv for HTML5 section element backward compatibility. -->
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <!-- jQuery library reference. Latest is always referenced from jQuery's CDN. -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <!-- jQuery UI JavaScript library reference. -->
+    <script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+    <!-- jQuery call to the datepicker() method. -->
+	<style>
+		.ui-selected {
+			border: 1px solid #000;
+		}
+	</style>
+	<script>
+		$(document).ready(function() {
+            $("#solutions").selectable({
+                stop: function() {
+                    $(".ui-selected").each(function() {
+                        $("#selected").html("Product selected: " + this.id);
+                    });
+                }
+            });
+		});
+	</script>
+</head>
+	
+<body>
+	<section id="content">
+        <fieldset><legend>Contact a Sales Rep.</legend>
+        	<form id="contactus_form" name="contactus_form" action="response.html" method="get">
+           		<label>Name:</label>
+           		<input name="name" type="text" id="name" maxlength="30"><br>
+           
+           		<label>Company Name:</label>
+           		<input name="companyname" type="text" id="companyname" maxlength="30"><br>
+            
+           		<label>Phone Number:</label>
+           		<input name="phonenumber" type="text" id="phonenumber" maxlength="10"><br>
+            
+           		<label>Email:</label>
+           		<input name="email" id="email" type="text" maxlength="10"><br>
+            
+            	<p>Select the product that you're interested in:</p>
+            	<ol id="solutions">
+                	<li id="vProspect"><img src="images/logo_vprospect.gif" width="63" height="36"></li>
+                	<li id="vConvert"><img src="images/logo_vconvert.gif" width="63" height="36"></li>
+                	<li id="vRetain"><img src="images/logo_vretain.gif" width="63" height="36"></li>
+            	</ol>
+            	<br><br><br>
+            	<label><span id="selected"></span></label>
+            	<br><br>
+            
+           		<label>Current Infrastructure:</label>
+				<select name="infrastructure" id="infrastructure">
+					<option value="Mac">Mac</option>
+					<option value="Linux">Linux</option>
+           			<option value="Unix">Unix</option>         
+           			<option value="Windows">Windows</option>
+           		</select><br>
+            
+           		<label>Company Size:</label>
+				<select name="companysize" id="companysize">
+					<option value="1-10">1-10 Employees</option>
+					<option value="11-50">11-50 Employees</option>
+           			<option value="51-100">51-100 Employees</option>         
+           			<option value="101+">101+ Employees</option>
+        		</select><br>
+            
+           		<label>How did you hear about us?</label>
+				<select name="hearaboutus" id="hearaboutus">
+					<option value="Ad">Print Ad / Web Ad</option>
+					<option value="Word of Mouth">Word of Mouth</option>
+           			<option value="Radio">Radio Ad</option>         
+           			<option value="TV Commercial">TV Commercial</option>
+        		</select><br>
+            
+           		<!-- THIS ELEMENT WILL BE RESIZABLE -->
+           		<p>Questions / Comments:</p>
+           		<textarea name="questions" id="questions"></textarea>    
+           		<!-- END RESIZABLE -->   
+            
+           		<br><br>
+           		<input type="submit" id="submitbutton">
+            
+           	</form>
+        </fieldset>
+	</section>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <link href="css/style.css" type="text/css" rel="stylesheet"/>  
+        <link href="css/menu.css" type="text/css" rel="stylesheet"/>  
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="js/cust.js" type="text/javascript"></script>
+    </head>
+    <body> 
+        <div id="header-wrapper">
+            <div id="header">
+                <h1>Form</h1>
+            </div>
+        </div>
+        <div id="content-wrapper">
+            <div id="content">
+                <div id="vmenu">
+                    <ul>
+                        <li><a href="index.html">Products</a></li>
+                        <li><a href="cust.html">Customers</a></li>
+                        <li><a href="orders.html">Orders</a></li>
+                        <li><a href="misc.html">Misc</a></li>
+                    </ul>
+                </div>
+                <div id="ietemContainer">
+                    <h3>Products</h3>
+                    <hr/>
+                    <input type="button" value="Add product" onclick="addProduct();">
+                    <!-- product area -->
+                    <div id="products"> </div>
+                    <hr/>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div id="footer-wrapper">
+            <div id="footer">
+                footer
+            </div>
+        </div>
+        <!-- dialog box -->
+        <div id="window-wrapper">;
+            <div class="window">
+                <div id="dialogH">
+                    <h3>Product details</h3>
+                    <span id="close" onclick="closePopup();">X</span>
+                </div>         
+                <form>
+                    <input id="productId" type="hidden" value="-1"/>
+                    <label for="formName">Name:</label><input type="text" id="formName"/>
+                    <label for="formPrice">Price:</label><input type="text" id="formPrice"/>
+                    <label for="formQuantity">Quantity:</label><input type="text" id="formQuantity"/>
+                    <div id="buttonsContainer">
+                        <input type="button" value="Cancel" onclick="closePopup();"/>
+                        <input id="saveBtn" type="button" value="Save" onclick="saveProduct();"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="cover"></div>
+    </body>
+</html>

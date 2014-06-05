@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Photography</title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id ="header">
+            <div id ="header-wrapper">
+
+                <div id="title">PHOTOGRAPHY</div>
+
+                <nav id="menu">
+                    <ul>
+                        <li onclick="setPageHash('home');">Home </li>
+                        <li id="gallery">Gallery
+                            <ul class="tree hidden">
+
+                                <li class="leaf">
+                                    <hr>
+                                    <span onclick="setPageHash('nature');">Nature</span>
+                                </li>
+                                <li class="leaf">
+                                    <span onclick="setPageHash('travel');">Travel</span>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li onclick="setPageHash('contact');">Contact</li>
+                    </ul>       
+                </nav>
+            </div>
+        </div>
+        <div id="content">
+            <div id="content-wrapper">
+                <div id="contact">
+                    <div id="contact-wrapper">
+                        <form name="htmlform" method="post" action="email.php">
+                            <table width="450px">
+                                <tr>
+                                    <td>
+                                        <label for="first_name">First Name *</label>
+                                    </td>
+                                    <td>
+                                        <input  type="text" name="first_name" maxlength="50" size="30">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="last_name">Last Name *</label>
+                                    </td>
+                                    <td>
+                                        <input  type="text" name="last_name" maxlength="50" size="30">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="email">Email Address *</label>
+                                    </td>
+                                    <td>
+                                        <input  type="text" name="email" maxlength="80" size="30">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="telephone">Telephone Number</label>
+                                    </td>
+                                    <td>
+                                        <input  type="text" name="telephone" maxlength="30" size="30">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="comments">Comments *</label>
+                                    </td>
+                                    <td>
+                                        <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align:center">
+                                        <input type="submit" value="Submit">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+
+                    </div>
+                </div>
+                <div id="page-left-div" onclick="previousPage();">
+                    <a title="Previous" id="go-left-page">
+                        <span></span>
+                    </a>
+                </div>
+                <div id="page-right-div" onclick="nextPage();">
+                    <a title="Next" id="go-right-page">
+                        <span></span>
+                    </a>
+                </div>
+            </div>  
+
+        </div>
+        <div id="image-wrapper">         
+            <div id="large-image-container">
+                <div id="go-left-div" onclick="goLeft();">
+                    <a title="Previous" id="go-left-img">
+                        <span></span>
+                    </a>
+                </div>
+                <div id="go-right-div" onclick="goRight();">
+                    <a title="Next" id="go-right-img">
+                        <span></span>
+                    </a>
+                </div>
+                <div id="close" onclick="closeImage();">
+                    <a title="Close" id="close-img">
+                        <span></span>
+                    </a>
+                </div>
+            </div>  
+        </div>      
+        <div id="footer">
+            <div id="footer-wrapper">
+                footer
+            </div>
+        </div>
+
+        <div id="cover"></div>
+
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/script.js"></script>   
+    </body>
+</html>

@@ -1,0 +1,65 @@
+html {
+}
+body {
+    /*background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/section_bg_pattern.png) repeat-x top left #000000 !important;*/
+    background:gainsboro !important;
+    
+}
+* { 
+    font-family: Calibri;
+    box-sizing:  border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+a { text-decoration:none}
+
+#wrapper {
+    width:970px;
+    padding:0px;
+    background:none;
+    margin-top:0px !important;
+}
+
+#masthead {
+    /*background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/section_bg_pattern.png); */
+	background:lemonchiffon; 
+}
+
+#masthead .subsection_header {
+    width:962px;
+    height:200px;
+    /*background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/small_bnr.jpg);*/
+    background: red;
+    margin-left:4px;
+    margin-top:52px;
+}
+
+#content {
+    width: 607px;
+   /* margin-right:0px;    
+    float: right;*/
+}
+
+/************************************************************************************************** [ MAIN MENU ] */
+#access { 
+    width:966px;    
+    background:none;
+    height:52px;
+}
+
+#access div.menu-header,
+#access .menu-header,
+div.menu {
+    margin-left: 120px;
+    margin-top:6px;
+    width: 615px;
+}	
+
+#comments{
+    color: darkslategrey;
+}
+
+#primary .site-content{
+    color: red !important;
+}

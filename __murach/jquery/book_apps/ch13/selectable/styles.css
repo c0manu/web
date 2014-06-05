@@ -1,0 +1,53 @@
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 87.5%;
+	width: 650px;
+	margin: 0 auto;
+}
+section {
+	padding: 15px 25px;
+	background-color: #fff;
+}
+fieldset {
+	width: 415px;
+	padding: 10px;
+}
+label {
+	float: left;
+	width: 210px;
+}
+input, select {
+	width: 200px;
+    margin-bottom: .5em;
+}
+h2 {
+	margin-bottom: .5em;
+}
+p {
+	margin-bottom: .5em;
+}
+textarea {
+	width: 410px;
+	height: 60px;
+}
+#solutions {
+	margin-top: 15px;
+	margin-left: 25px;
+	list-style-type: none;
+}
+#solutions li {
+	float: left;
+	width: 70px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+#selected {
+	clear: both;
+}

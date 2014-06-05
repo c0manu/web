@@ -1,0 +1,1000 @@
+html {
+}
+body {
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/section_bg_pattern.png) repeat-x top left #000000 !important;
+}
+* { 
+    font-family: Georgia, "Times New Roman", Times, serif; 
+    box-sizing:  border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+a { text-decoration:none}
+
+#wrapper {
+    width:970px;
+    padding:0px;
+    background:none;
+    margin-top:0px !important;
+}
+#main {
+    width:970px;
+    padding:0px;
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/main_area_bg_pattern.png) repeat-y;
+}
+#header {
+    width:970px;
+    padding:0;
+    margin:0px 0px 0px 0px;
+    height:300px;
+    position:relative;
+}
+#masthead {
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/main_area_bg_pattern.png) repeat-y;
+    float:left;
+}
+
+#masthead .subsection_header {
+    width:962px;
+    height:237px;
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/small_bnr.jpg);
+    margin-left:4px;
+    margin-top:52px;
+}
+
+#branding {
+    width:970px;
+    color:#ff00ff;
+}
+
+#branding img {
+    border:none;
+    width: 962px;
+    height: 237px;
+    margin-left: 4px;
+    margin-top: -33px;
+}
+
+#content {
+    width: 607px;
+    margin-right:0px;    
+    float:
+}
+
+/************************************************************************************************** [ TOP MENU ] */
+
+#top_menu {
+    width:970px;
+    height:32px;
+    overflow:hidden;
+    padding-top:3px;
+    font-size:11px;
+    color:#FFFFFF;
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/main_area_bg_top.png) no-repeat bottom left;
+
+}
+#top_menu a {
+    color:#FAE6E6;
+    height:19px;
+    padding-top:2px;
+    padding-left:11px;
+    display:block;
+}
+#top_menu a:hover{
+    color:#FFFFFF;
+}
+#top_menu a#log_in  {
+    font-family:Arial, Helvetica, sans-serif;
+    float:right;
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png) right -39px  no-repeat;
+    padding-right:20px;
+    margin-right:4px;
+
+}
+#top_menu a#facebook  {
+    font-family:Arial, Helvetica, sans-serif;
+    float:right;
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png) right 1px  no-repeat;
+    padding-right:40px;
+}
+#top_menu #qtranslate-3 {
+    float:right;
+    padding-right:40px;
+    height:21px;
+    overflow:hidden;
+    margin-bottom:0px;
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png) right -77px  no-repeat;
+}
+#top_menu #qtranslate-3-chooser {
+    margin-bottom:0px;
+}
+#top_menu li {
+    list-style-image:none;
+    display:inline-block;
+}
+#top_menu li a span {
+    font-family:Arial, Helvetica, sans-serif !important;
+}
+#top_menu li.active a span {
+    color:#DF7F7F;
+}
+
+
+/************************************************************************************************** [ MAIN MENU ] */
+#access { 
+    width:966px;    
+    background:none;
+    height:52px;
+}
+
+#access div.menu-header,
+#access .menu-header,
+div.menu {
+    margin-left: 120px;
+    margin-top:6px;
+    width: 615px;
+}
+
+/*D start - cio
+#menu-samr-meniu li {
+    height:36px;
+    overflow:hidden;    
+}
+*/
+/*D end - cio*/
+
+
+#masthead #access .menu li a {
+    vertical-align:inherit;
+    font-family: 'Vollkorn',serif;
+    text-transform:uppercase;
+    padding-top:0px;
+    font-size:14px;
+    color:#ac1b1b;
+    overflow:hidden;
+    height:36px;
+}
+
+#masthead #access .menu li a:hover {
+    color:#FFFFFF;
+    background-color:#E01010;    
+}
+
+
+#access ul ul   {
+    top:36px;
+}
+
+#access ul ul li  {
+    padding-top:5px;
+    background:  #E01010;
+}
+
+#access ul ul li a {
+    padding-bottom:0px;
+}
+
+
+#access li:hover > a, #access ul ul * > a {
+    color:#FADBDB !important;
+    background:  #E01010;
+}
+
+
+#access li:hover > a, #access ul ul *:hover > a {
+    color:#FFFFFF  !important;
+    background:  #E01010;
+}
+
+*/
+
+
+
+
+#masthead #access .menu li a {
+    vertical-align:inherit;
+    font-family: 'Vollkorn', serif;
+    text-transform:uppercase;
+    font-size:15px;
+    color:#ac1b1b;
+    height:36px;
+    overflow:hidden;
+    padding-top:1px;
+}
+#masthead #access .menu li a:hover {
+    color:#000000;
+    background-color:transparent;    
+}
+#masthead #access .menu li.current_page_item  a {
+    color:#FFFFFF;
+    background-color:#E01010;    
+}
+
+/*_______________________________________ DROP DOWN MENU */
+
+
+#masthead #access .menu li.current_page_item  a {}
+
+
+
+/*_______________________________________ LOGO */
+
+#site-title a { 
+    width:131px; height:117px;
+    display:block;
+    overflow:hidden;
+    text-indent:-3000px;
+    position:absolute;
+    margin-top:-90px;
+    margin-left:3px;
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/logo.png) ;
+}
+
+
+/*_______________________________________ RSS */
+
+li#badge_feed_link-3 {
+    width:63px; 
+    height:56px;
+    list-style-image:none;
+    display:inline-block;
+    overflow:hidden; float:right;
+    text-indent:-3000px;
+    margin-top:-4px;
+}
+#access li#badge_feed_link-3 a {
+    width:63px; 
+    height:56px;
+    display:block;
+    background-image:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png);
+    background-position:left -840px ;
+    float:left;
+}
+#access li#badge_feed_link-3 a:hover {
+    background-position:left -920px ;
+    background-color:transparent;
+}
+
+
+li#badge_feed_link-3 h3 {
+    display:none;
+    visibility:false;
+}
+
+/*_______________________________________ SEARCH */
+
+#access #search {
+    width:150px;
+    height:24px;
+    background-color:#f5f5f5;
+    border:1px solid #C8C8c8;
+    float:right;
+    overflow:hidden;    
+    position:relative;
+    margin:6px 14px 0px 0px;
+}
+#access #search:hover {
+    border:1px solid #aaaaaa;
+}
+#access #search input[type=text] {
+    border:none;
+    width:120px;
+    box-shadow:none;
+    height:22px;
+    overflow:hidden;
+    position:absolute;
+    left:0px;
+    top:0px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color:#CCCCCC;
+    background-color:#f5f5f5;
+}
+#access #search input[type=submit] {
+    position:absolute;
+    border:none;
+    box-shadow:none;
+    width:20px; height:20px;
+    right:0px;
+    background-image:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png);
+    background-position:left -318px ;
+    text-indent:-3000px;
+    margin:1px 1px 0px 0px;
+    cursor:pointer;
+    background-color:transparent;
+}
+#access #search input[type=submit]:hover {
+    background-position:left -358px ;
+}
+
+/************************************************************************************************** [ SIDEBAR ] */
+
+#primary {
+    width:293px;
+    margin:20px 24px 0px 0px;
+    background-color:#FFFFFF;
+    border-left:1px solid #D8D8D8;    
+    border-right:1px solid #D8D8D8;    
+    border-bottom:1px solid #D8D8D8;    
+    padding:0px;
+    
+    float:right;
+    
+    -moz-box-shadow: 0px 1px 3px #DDDDDD;
+    -webkit-box-shadow: 0px 1px 3px #DDDDDD;
+    box-shadow: 0px 1px 3px #DDDDDD;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=90, Color='#DDDDDD')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=90, Color='#DDDDDD');
+    
+        
+}
+#primary ul.xoxo {
+    padding:0px;    
+}
+
+#primary h3 {
+    padding:20px 0px 0px 20px;
+    min-height:75px;
+    text-transform:uppercase;
+    font-family: Georgia, "Times New Roman", Times, serif; 
+    font-size:15px; 
+    font-weight:normal;
+    color:#333333;
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/right_column_header_bg.png) no-repeat right top;
+
+}
+
+/*_______________________________________ LIST LINK */
+
+#primary ul.xoxo li ul li a, .home_main_column ul li a {
+    font-size:14px;
+    color:#454545;    
+    padding: 3px 3px 3px 20px;
+    background-image:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png);
+    background-repeat:no-repeat;
+    background-position:0px -114px;
+}
+#primary ul.xoxo li ul li a:hover, .home_main_column ul li a:hover {
+    background-position:1px -155px;
+    color:#C20000 !important;
+    text-decoration:none;
+}
+#primary ul.xoxo li ul {
+    padding-right:20px;
+    list-style-image:none;
+    list-style:none;
+}
+#primary ul.xoxo li ul li, .home_main_column ul li {
+    padding-bottom:5px;
+    color:#C20000;
+
+}
+
+/*_______________________________________ BIG LINKS AT THE BOTTOM */
+
+#primary a.sidebar_big_links {
+    display:block;
+    height:84px;
+    font-family: 'Podkova', serif; 
+    font-size:13px;
+    color:#000000;
+    background-image:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png);
+    background-repeat:repeat-x;
+    background-position:0px -1000px;
+    cursor:pointer;    
+}
+
+#primary a.sidebar_big_links:hover {
+    color:#FFFFFF;
+    background-position:0px -1120px;    
+    text-decoration:none;
+}
+
+#primary a.sidebar_big_links span.text, .home_big_links  a.sidebar_big_links span.text {
+    width:200px;
+    padding-top:15px;
+    height:79px;
+    overflow:hidden;
+    float:left;
+    font-size:12px;
+    
+}
+#primary a.sidebar_big_links span.text b, .home_big_links  a.sidebar_big_links span.text b {
+    font-size:15px;
+    color:#C20000;
+    display:block;
+    font-weight:regular;
+}
+
+#primary a.sidebar_big_links:hover span.text b, .home_big_links  a.sidebar_big_links:hover span.text b {
+    color:#FFFFFF;
+}
+
+#primary a.sidebar_big_links span.image, .home_big_links  a.sidebar_big_links span.image {
+    width:75px;
+    height:84px;
+    float:left;
+}
+
+#primary a#volunteer span.image, .home_big_links a#volunteer span.image {
+    background-image:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png);
+    background-repeat:no-repeat;
+    background-position:20px -540px;
+}
+#primary a#volunteer:hover span.image, .home_big_links  a#volunteer:hover span.image {
+    background-position:-43px -540px;
+}
+
+
+#primary a#activity_report span.image, .home_big_links  a#activity_report span.image {
+    background-image:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png);
+    background-repeat:no-repeat;
+    background-position:20px -700px;
+}
+#primary a#activity_report:hover span.image, .home_big_links  a#activity_report:hover span.image {
+    background-position:-43px -700px;
+}
+
+
+#primary a#two_percent span.image, .home_big_links  a#two_percent span.image {
+    background-image:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png);
+    background-repeat:no-repeat;
+    background-position:20px -620px;
+}
+#primary a#two_percent:hover span.image, .home_big_links  a#two_percent:hover span.image {
+    background-position:-43px -620px;
+}
+
+
+
+/************************************************************************************************** [ LEFT COLUMN ] */
+
+#container {
+    width:609px; 
+    overflow:hidden;
+    float:left;
+    margin:20px 0px 0px 24px;
+}
+#container #content {
+    width:609px; 
+    margin:0px;    
+}
+#container div.post {
+    position:relative;
+}
+
+/*_______________________________________ DATE */
+
+#container div.post  div.entry-meta-2 a[rel="bookmark"] {
+    display:block;
+    width:70px;
+    padding:7px 15px 0px 12px;
+    height:75px;
+    margin-top:0px;
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png) 0px -1240px no-repeat;
+    position:absolute;
+
+    
+    text-transform:uppercase;
+    font-size:12px; 
+    font-weight:normal;
+    color:#FFFFFF;
+}
+#container div.post  div.entry-meta-2 span {
+    display:none;
+    visibility:false;
+}
+#container div.post  div.entry-meta-2 a[rel="bookmark"] span {
+    width:40px;
+    text-align:center;
+    display:block;
+    visibility:visible;
+}
+
+#container div.post  div.entry-meta-2 a[rel="bookmark"] span:first-line {
+    font-size: 25px;
+    line-height:25px;
+}
+
+
+
+/*_______________________________________ TITLE */
+
+
+#container div.post h2.entry-title {
+    padding-left:75px;    
+    font-size:24px;
+    font-weight:normal;
+}
+
+#container div.post h2.entry-title a {
+    color:#d10e0e;
+}
+
+/*_______________________________________ POST DETAILS */
+
+#container div.post div.post-details {
+    margin-left:75px;    
+    font-size:12px;
+}
+
+#container div.post div.post-details span.cat-links {
+    float:left;        
+}
+
+#container div.post div.post-details div.entry-meta {
+    float:left;    
+    margin-left:5px;
+    color:#333;
+}
+
+#container div.post div.post-details a { 
+    color:#d10e0e;
+}
+#container div.post div.post-details a:hover { 
+    text-decoration:underline;
+}
+
+
+#container div.post div.post-details .entry-date, #container div.post div.post-details .entry-date, 
+#container div.post  div.entry-meta-2 span {
+    display:none;
+    visibility:false;
+}
+
+#container div.post div.post-details div.bottom-line {
+    height:20px;
+    clear:both;
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png) 0px -1315px repeat-x;
+}
+
+#content,
+#content input,
+#content textarea {
+    color: #333;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+/*_______________________________________ POST CONTENT */
+
+#container div#content div.post div.entry-content p {
+    font-style:14px;    
+}
+
+/*_______________________________________ POST BOTTOM INFO */
+
+
+
+#content .entry-utility a { 
+    color:#D10E0E;
+}
+#content .entry-utility a:hover { 
+    color:#D10E0E;
+    text-decoration:underline;
+}
+
+#content .entry-utility .tag-links {
+    color:#333;    
+}
+
+
+
+/************************************************************************************************** [ FOOTER ] */
+#footer {
+    clear:both;    
+}
+
+#footer #colophon {
+    margin-top:0px;
+    border:none;     
+    padding-bottom:0px;
+}
+
+#footer #site-info a {
+    width:940px;
+    color:#fff;
+    text-align:center;
+    font-size:11px;
+    font-weight:normal !important;
+    display:block;
+}
+#footer #site-info a:hover {
+    color:#CD0909;
+}
+#footer #site-generator {
+    display:none;
+    visibility:none;    
+}
+
+
+/************************************************************************************************** [ HOME ] */
+
+/*_______________________________________ THE 3 BIG LINKS */
+.home_big_links {
+    width:962px !important;
+    margin-left:4px;
+    height:125px;
+    background:#E6E6E6;
+    border-bottom:1px solid #C8C8C8;    
+}
+.home_big_links  a.sidebar_big_links {
+    display:block;
+    width:294px;
+    height:85px;
+    float:left; 
+    margin-left:20px;
+    margin-top:20px;
+    height:84px;
+    font-family: 'Podkova', serif; 
+    font-size:13px;
+    color:#000000;
+    background-image:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png);
+    background-repeat:repeat-x;
+    background-position:0px -1001px;
+    cursor:pointer;    
+    border:1px solid #B1B1B1;
+    
+    -moz-box-shadow: 0px 1px 3px #DDDDDD;
+    -webkit-box-shadow: 0px 1px 3px #DDDDDD;
+    box-shadow: 0px 1px 3px #DDDDDD;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=90, Color='#DDDDDD')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=90, Color='#DDDDDD');
+}
+
+.home_big_links  a.sidebar_big_links:hover {
+    color:#FFFFFF;
+    background-position:0px -1121px;    
+    text-decoration:none;
+    border:1px solid #8D181A;
+}
+
+/*_______________________________________ COLUMNS AND HEADERS */
+.home_main_column {
+    width:294px;
+    margin-top:30px;
+     margin-left:20px;
+    float:left; 
+}
+
+
+.first_column {
+    margin-left:24px !important;
+
+}
+
+.last_column {
+    margin-left:20px;    
+}
+ 
+
+
+.home_main_column h3 {
+    font-size:16px;
+    padding-left:3px;
+    text-transform:uppercase;
+    display:block; height:20px;     
+}
+
+
+.home_main_column div.bottom-line {
+    height:30px;
+    clear:both;
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png) 0px -1315px repeat-x;
+}
+
+
+
+.home_main_column a.read_more {
+    display:block;
+    width:290px;
+    float:right;
+    font-size:12px;
+    font-weight:bold;
+    text-align:right;
+    color:#4a4a4a;    
+    padding-right:14px;
+    background-image:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png);
+    background-repeat:no-repeat;
+    background-position:right -396px;
+    text-transform:lowercase;
+}
+.home_main_column a.read_more:hover {
+    color:#CD0909;
+    background-position:right -436px
+}
+
+
+.home_main_column .about_us {
+    margin-bottom:22px;    
+}
+
+/*_______________________________________ LATEST NEWS */
+
+.home_main_column .news_entry {
+    clear:both;
+}
+
+#main .home_main_column .news_entry .date {
+    width:38px;
+    float:left;
+    max-height:150px;
+    font-size:12px;
+    font-family:Arial, Helvetica, sans-serif !important;    
+    color:#CD0909;
+    text-align:center;
+}
+
+#main .home_main_column .news_entry .content {
+    float:right;
+    width:255px;
+    padding-left:12px;
+    background-image:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png);
+    background-repeat:no-repeat;
+    background-position:left -1680px;
+    margin-bottom:22px;
+}
+
+#main .home_main_column .news_entry .date b {
+    padding-top:2px;
+    display:block;
+    font-size:12px;
+    font-size:20px;
+    font-family:Arial, Helvetica, sans-serif !important;
+    text-align:center;
+}
+
+
+.home_main_column .news_entry h1 a {
+    top:0px;
+    margin-left:0px;
+    width:236px;
+    padding:4px 4px 4px 0px;
+    font-size:12px;
+    font-weight:bold;
+    color:#CD0909;    
+}
+.home_main_column .news_entry h1 a:hover {
+    background-color:#CD0909;
+    color:#FFFFFF;
+}
+
+.home_main_column .news_entry span a {
+    width:244px;
+    display:block;
+    font-size:11px;
+    line-height:15px;
+    padding-top:3px;
+    color:#333333;
+}
+
+.home_main_column .news_entry span a:hover {
+    color:#CD0202;
+}
+
+
+/*_______________________________________ LINKS - THE REST INHERITED FROM THE RIGHT COLUMN  */
+.home_main_column ul {
+    margin-left:10px;
+    list-style-image:none;
+    list-style:none;
+}
+
+
+/************************************************************************************************** [ BOTTOM AREA ] */
+#bottom_area {
+    clear:both;    
+    padding-top:25px;
+    width:962px !important;
+    margin-left:4px;
+    height:83px;
+    background:#F2F2F2;
+}
+
+#bottom_area .container {
+    width:923px;    
+    margin-left:20px;
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png) left -1880px repeat-x;
+}
+
+#bottom_area .container li#nav_menu-2 div.menu-footer-menu-container {
+    width:600px;
+    margin-left:-3px;
+    position:relative;
+    top:20px;
+}
+
+
+#bottom_area .container  div.menu-footer-menu-container ul li {
+    display:inline;    
+    margin-right:2px;
+}
+#bottom_area .container div.menu-footer-menu-container ul li a {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#333333;
+    padding:3px 5px;
+    font-size:11px;
+    text-transform:capitalize;
+}
+#bottom_area .container  div.menu-footer-menu-container ul li a:hover {
+    background-color:#C20000;
+    color:#ffffff;
+}
+
+
+#bottom_area .container #nav_menu-2 .menu-footer-menu-container ul#menu-footer-menu,
+#bottom_area .container #nav_menu-2 .menu-footer-menu-container ul#menu-footer-menu li,
+#bottom_area .container li 
+{
+    list-style-image:none !important;
+    list-style:none !important;
+    padding:0px !important;
+    margin:0px;
+}
+
+#bottom_area .container #nav_menu-2 .menu-footer-menu-container ul#menu-footer-menu li.current-menu-item a {
+    background-color:transparent;    
+}
+#bottom_area .container #nav_menu-2 .menu-footer-menu-container ul#menu-footer-menu li.current-menu-item a:hover {
+    background-color:#C20000;
+}
+
+
+a#hostico {
+    display:block;
+    height:20px;
+    float:right;
+    
+    position:relative;
+    top:20px;
+    padding-right:72px;    
+    padding-top:2px;
+    color:#333;
+    background-image:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png);
+    background-repeat:no-repeat;
+    background-position:right -480px;
+}
+a#hostico:hover  {
+    background-position:right -520px;
+}
+
+
+
+a#donate {
+    width:60px;
+    height:160px;
+    display:block;
+    position:absolute; 
+    left:966px;
+    top:125px;
+    background-image:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png);
+    background-repeat:no-repeat;
+    background-position:left -1360px;
+    z-index:2;
+    text-indent:-3000px;
+}
+a#donate:hover {
+    background-position:left -1520px;
+}
+
+
+
+ul#menu-samr-meniu li a:hover {
+    color:#FFFFFF;
+    background-color:#E01010 !important;    
+    background:#E01010 !important;    
+    cursor:pointer !important;
+}
+
+/************************************************************************************************** [ SPONSORS ] */
+
+div.sponsors {
+    float:left;
+    width:189px;     
+    height:115px;
+    margin-right:19px; 
+    margin-top:10px; 
+    text-align:center;
+    font-size:13px;
+    color:#333;
+    line-height:20px;
+}
+div.sponsors.with-text {
+    float:none;
+    clear:both;
+    width:609px;
+    height:auto;
+    text-align:left;    
+    margin-bottom:20px;
+    border-bottom:1px solid #999;
+    font-size:12px;
+    line-height:18px;
+}
+div.sponsors.with-text span {
+    display:inline-block;    
+    width:390px;
+    min-height:73px;
+    margin-bottom:20px;
+    text-align:justify;
+}
+div.sponsors.with-text.sponsors_no_margin {
+    border-bottom:none;    
+}
+div.sponsors.with-text a {
+    float: left; 
+    margin:0px 19px 10px 0px;    
+}
+div.sponsors:hover {
+    color:#d10e0e;
+    cursor:default;
+}
+div.sponsors a {
+    display:block;
+    width:189px;
+    height:75px;
+    overflow:hidden;
+    border:1px solid #bbb;
+    /* background-image:url("http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/sponsor_bg.png"); */
+    background-repeat:repeat-x;
+    background-color:#F6F6F6;
+    margin-bottom:3px;
+}
+div.sponsors a:hover {
+    border:1px solid #aeaeae;
+}
+
+div.sponsors a:hover img {
+    margin-top:-100px;
+}
+
+h1.sponsor-title, h2.sponsor-title {
+    font-family: Georgia, "Times New Roman", Times, serif; 
+    font-size:24px;
+    height:43px;
+    font-weight:normal;
+    color:#d10e0e;
+    clear:both;
+    background:url(http://www.voluntarmaltez.ro/wp-content/themes/twentyten/design/img/assets_1.png) 0px -2000px repeat-x;
+}
+
+
+.sponsors_no_margin {
+    margin-right:0px !important;    
+}
+
+div.menu-header ul#menu-samr-meniu ul.sub-menu li.current-menu-item a {
+    color:#fff !important;    
+    text-decoration:underline;
+}
+
+div.menu-header ul#menu-samr-meniu ul.sub-menu li a {
+    padding-top:10px !important;
+}
+
+
+
+#content div.post .entry-title {
+	font-size:24px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight:normal;
+}
+#content div.post > .entry-meta {
+	border-top:1px dotted #888;
+	border-bottom:1px dotted #888;
+	padding:10px 0px 10px 0px;
+	margin-top:15px;
+	text-align:right;
+}
+#reply-title {
+	font-family: Georgia, "Times New Roman", Times, serif !important;
+	font-weight:400 !important;
+}
+#fblike {
+	float:left;
+}
+
