@@ -76,6 +76,10 @@ function loadPictures(category) {
         if (gNbr % gNbrInPage) {
             maxPages[category] += 1;
         }
+        console.log('max page: ' + category + ' ' + maxPages[category]);
+        console.log(gNbr);
+        $('#page-left-div').hide();
+        $('#page-right-div').hide();
         if (maxPages[category] == 1) {
             $('#page-left-div').hide();
             $('#page-right-div').hide();
@@ -87,41 +91,60 @@ function loadPictures(category) {
 }
 function nextPage() {
 
+    var category;
     switch (window.location.hash) {
-        case '#nature':
-            if (gPage < maxPages['nature']) {
-                $('.image').remove();
-                gPage++;
-                for (var i = (gPage - 1) * 18; i < gNbrInPage * gPage; i++) {
-                    if (gAllPictures[i] != null) {
-                        displayPictures(i, gAllPictures[i], 'img/nature/');
-                    }
-                }
-                $('#page-left-div').show();
-                if (gNaturePage == maxPages['nature']) {
-                    $('#page-right-div').hide();
-                }
-            }
+        case '#':
+            category = 'home';
             break;
+        case '#nature':
+            category = 'nature';
+            break;
+        case '#travel':
+            category = 'travel';
+            break;
+    }
+    if (gPage < maxPages[category]) {
+        $('.image').remove();
+        gPage++;
+        for (var i = (gPage - 1) * 18; i < gNbrInPage * gPage; i++) {
+            if (gAllPictures[i] != null) {
+                displayPictures(i, gAllPictures[i], 'img/' + category + '/');
+            }
+        }
+        $('#page-left-div').show();
+        if (gPage == maxPages[category]) {
+            $('#page-right-div').hide();
+        }
     }
 }
 function previousPage() {
+
+    var category;
     switch (window.location.hash) {
-        case '#nature':
-            if (gPage > 1) {
-                $('.image').remove();
-                gPage--;
-                for (var i = (gPage - 1) * 18; i < gNbrInPage * gPage; i++) {
-                    if (gAllPictures[i] != null) {
-                        displayPictures(i, gAllPictures[i], 'img/nature/');
-                    }
-                }
-                $('#page-right-div').show();
-                if (gPage == 1) {
-                    $('#page-left-div').hide();
-                }
-            }
+        case '#':
+            category = 'home';
             break;
+        case '#nature':
+            category = 'nature';
+            break;
+        case '#travel':
+            category = 'travel';
+            break;
+
+    }
+    if (gPage > 1) {
+        $('.image').remove();
+        gPage--;
+        for (var i = (gPage - 1) * 18; i < gNbrInPage * gPage; i++) {
+            if (gAllPictures[i] != null) {
+                displayPictures(i, gAllPictures[i], 'img/' + category + '/');
+            }
+        }
+        $('#page-right-div').show();
+        if (gPage == 1) {
+            $('#page-left-div').hide();
+        }
+
     }
 }
 function displayPictures(key, name, path) {
@@ -220,6 +243,8 @@ function displayNavigation() {
     });
 }
 function loadContact() {
+    $('#page-left-div').hide();
+    $('#page-right-div').hide();
     $('.image').remove();
     $('#contact').show();
 }

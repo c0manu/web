@@ -113,6 +113,31 @@ li:hover{
 /*contact form*/
 #contact{
     display: none;
+    
+}
+#contact-wrapper{
+    margin-left: 150px;
+    padding-top: 50px;
+    padding-left: 70px;
+    width: 550px;
+    height:330px;
+    font-family: Calibri;
+    font-size: 18px;
+    font-weight: bold;
+    border:1px solid black;
+    border-radius: 3px;
+    box-shadow: 10px 15px 20px black;
+    background-color: black;
+}
+#contact-table{
+    width : 450px;
+   
+}
+table td{
+    padding-bottom: 7px;
+}
+table input{
+    height: 20px;
 }
 /*footer CSS*/
 #footer{
