@@ -75,7 +75,9 @@ function loadPictures(category) {
         maxPages[category] = parseInt(gNbr / gNbrInPage)
         if (gNbr % gNbrInPage) {
             maxPages[category] += 1;
-        }
+        }     
+        $('#page-left-div').hide();
+        $('#page-right-div').hide();
         console.log('max page: ' + category + ' ' + maxPages[category]);
         console.log(gNbr);
         $('#page-left-div').hide();
@@ -167,13 +169,11 @@ function openImage(path, id) {
     $('#cover').fadeIn(200);
 }
 function closeImage() {
-
     $('#image-wrapper').fadeOut(200);
     $('#cover').fadeOut(200);
 }
 
 function handleKeyDownEvent() {
-
     $(document).keydown(function(e) {
         if (e.keyCode === 27) { //escape 
             closeImage();
