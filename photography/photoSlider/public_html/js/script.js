@@ -262,6 +262,7 @@ function setPageHash(name) {
             break;
         case 'contact':
             window.location.hash = 'contact';
+            window.location.hash = 'test';
             break;
         default:
             break;
