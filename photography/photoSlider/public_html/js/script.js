@@ -10,22 +10,28 @@ $(document).ready(function() {
 
     handleKeyDownEvent();
     displayNavigation();
+    showGallery();
+    loadPages();
+
     $('#image-wrapper').click(function(e) {
         //  closeImage(); 
     });
+});
 
-    $('#gallery').hover(function() {
+function loadPages(){
+     $(window).on('hashchange', function() {
+        loadPage(window.location.hash);
+    });
+    loadPage(window.location.hash);   
+}
+
+function showGallery(){
+     $('#gallery').hover(function() {
         $('.tree').stop().fadeIn(200);
     }, function() {
         $('.tree').stop().fadeOut(200);
     });
-
-    $(window).on('hashchange', function() {
-        loadPage(window.location.hash);
-    });
-    loadPage(window.location.hash);
-
-});
+}
 
 function loadPage(hash) {
 
@@ -78,10 +84,6 @@ function loadPictures(category) {
         }     
         $('#page-left-div').hide();
         $('#page-right-div').hide();
-        console.log('max page: ' + category + ' ' + maxPages[category]);
-        console.log(gNbr);
-        $('#page-left-div').hide();
-        $('#page-right-div').hide();
         if (maxPages[category] == 1) {
             $('#page-left-div').hide();
             $('#page-right-div').hide();
@@ -132,7 +134,6 @@ function previousPage() {
         case '#travel':
             category = 'travel';
             break;
-
     }
     if (gPage > 1) {
         $('.image').remove();
@@ -146,7 +147,6 @@ function previousPage() {
         if (gPage == 1) {
             $('#page-left-div').hide();
         }
-
     }
 }
 function displayPictures(key, name, path) {
@@ -173,7 +173,7 @@ function closeImage() {
     $('#cover').fadeOut(200);
 }
 
-function handleKeyDownEvent() {
+function handleKeyDownEvent() { 
     $(document).keydown(function(e) {
         if (e.keyCode === 27) { //escape 
             closeImage();
@@ -195,6 +195,7 @@ function getPath() {
             break;
         case '#nature':
             path = 'img/nature';
+            break;
         case '#travel':
             path = 'img/travel';
             break;
@@ -262,10 +263,43 @@ function setPageHash(name) {
             break;
         case 'contact':
             window.location.hash = 'contact';
-            window.location.hash = 'test';
             break;
         default:
             break;
     }
 
 }
+function showSocialButtons() {
+
+    var html =
+              '<div id="social-buttons" class="fade">'
+            + '<div class="fb-like" data-href="YOUR_URL" data-send="true" data-layout="box_count" data-width="50" data-show-faces="true" data-colorscheme="dark"></div>'
+            + '<div class="g-plusone-frame"><div class="g-plusone" data-size="tall" data-href="YOUR_URL"></div></div>'
+            + '<a href="https://twitter.com/share" class="twitter-share-button" data-url="YOUR_URL" data-text="YOUR_APP_DESCRIPTION" data-count="vertical">Tweet</a>'
+            + '<div id="fb-root"></div>'
+            + '</div>';
+    document.getElementById( 'viewport' ).insertAdjacentHTML( 'beforeEnd', html );
+
+    var script = document.createElement( 'script' );
+    script.async = true;
+    script.src = document.location.protocol + '//connect.facebook.net/en_US/all.js#xfbml=1&appId=YOUR_FB_APP_ID';
+    document.getElementById( 'fb-root' ).appendChild( script );
+
+    script = document.createElement( 'script' );
+    script.async = true;
+    script.src = document.location.protocol + '//platform.twitter.com/widgets.js';
+    document.getElementById( 'social-buttons' ).appendChild( script );
+
+    script = document.createElement( 'script' );
+    script.async = true;
+    script.src = document.location.protocol + '//apis.google.com/js/plusone.js';
+    document.getElementById( 'social-buttons' ).appendChild( script );
+
+    window.setTimeout( function () {
+
+        document.getElementById( 'social-buttons' ).removeAttribute( 'class' );
+
+    }, 4000 ); //4 second delay
+
+};
+
