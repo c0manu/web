@@ -12,6 +12,8 @@ $(document).ready(function() {
     displayNavigation();
     showGallery();
     loadPages();
+    showSocialButtons();
+    validateEmail();
 
     $('#image-wrapper').click(function(e) {
         //  closeImage(); 
@@ -57,7 +59,7 @@ function loadPage(hash) {
 }
 
 function loadPictures(category) {
-
+  
     $.ajax({
         type: "POST",
         dataType: "text",
@@ -207,7 +209,7 @@ function goLeft() {
     var path = getPath();
     $('.large-image').remove();
     gCurrentId -= 1;
-    if (gCurrentId <= 0) {
+    if (gCurrentId < 0) {
         gCurrentId = gNbr - 1;
     }
     $largeImage = $('<img  class="large-image ' + window.location.hash + '" src="' + path + '/' + gPictures[gCurrentId] + '">');
@@ -271,35 +273,25 @@ function setPageHash(name) {
 }
 function showSocialButtons() {
 
-    var html =
-              '<div id="social-buttons" class="fade">'
-            + '<div class="fb-like" data-href="YOUR_URL" data-send="true" data-layout="box_count" data-width="50" data-show-faces="true" data-colorscheme="dark"></div>'
-            + '<div class="g-plusone-frame"><div class="g-plusone" data-size="tall" data-href="YOUR_URL"></div></div>'
-            + '<a href="https://twitter.com/share" class="twitter-share-button" data-url="YOUR_URL" data-text="YOUR_APP_DESCRIPTION" data-count="vertical">Tweet</a>'
-            + '<div id="fb-root"></div>'
-            + '</div>';
-    document.getElementById( 'viewport' ).insertAdjacentHTML( 'beforeEnd', html );
-
-    var script = document.createElement( 'script' );
-    script.async = true;
-    script.src = document.location.protocol + '//connect.facebook.net/en_US/all.js#xfbml=1&appId=YOUR_FB_APP_ID';
-    document.getElementById( 'fb-root' ).appendChild( script );
-
-    script = document.createElement( 'script' );
-    script.async = true;
-    script.src = document.location.protocol + '//platform.twitter.com/widgets.js';
-    document.getElementById( 'social-buttons' ).appendChild( script );
-
-    script = document.createElement( 'script' );
-    script.async = true;
-    script.src = document.location.protocol + '//apis.google.com/js/plusone.js';
-    document.getElementById( 'social-buttons' ).appendChild( script );
-
-    window.setTimeout( function () {
-
-        document.getElementById( 'social-buttons' ).removeAttribute( 'class' );
-
-    }, 4000 ); //4 second delay
+    $('#social-buttons').share({
+        networks: ['googleplus','facebook','twitter','linkedin']
+        //theme: 'square'
+        //urlToShare: 'http://www.url-name.com',
+        //affix: 'center bottom'
+    });
 
 };
+function validateEmail(){
+    $('#first-name').focusout(function(e) {
+        e.preventDefault();
+        console.log($('#first-name').val().length);
+        if($('#first-name').val().length == 0){
+            $('#first-name').addClass('err-message');
+            $('#first-name').val('Enter name');
+        }
+        else{
+            $(this).removeClass('err-message');
+        }
+    });
+}
 

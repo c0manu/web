@@ -3,12 +3,13 @@
     <head>
         <title>Photography</title>
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/jquery.share.css" rel="stylesheet">
     </head>
     <body>
         <div id ="header">
             <div id ="header-wrapper">
 
-                <div id="title">PHOTOGRAPHY</div>
+                <div id="title" onclick="setPageHash('home');">PHOTOGRAPHY</div>
 
                 <nav id="menu">
                     <ul>
@@ -41,7 +42,7 @@
                                         <label for="first_name">First Name *</label>
                                     </td>
                                     <td>
-                                        <input  type="text" name="first_name" maxlength="50" size="30">
+                                        <input id="first-name" type="text" name="first_name" maxlength="50" size="30">
                                     </td>
                                 </tr>
                                 <tr>
@@ -74,7 +75,7 @@
                                         <label for="comments">Comments *</label>
                                     </td>
                                     <td>
-                                        <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+                                        <textarea id="comm-txt-area" name="comments" maxlength="1000" cols="25" rows="6"></textarea>
                                     </td>
 
                                 </tr>
@@ -122,13 +123,35 @@
         </div>      
         <div id="footer">
             <div id="footer-wrapper">
-                footer
+                <div id="footer-contact" class="col">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><span>Call:</span> +44 0208 1234 355</li>
+                        <li><span>Email:</span> <a href="mailto:alexandru.comanescu@pss.ro" title="Email Us">alexandru.comanescu@pss.ro</a></li>
+                        <li>or</li>
+                        <li><span>Skype:</span> <a href="skype:alexandru.comanescu83?call" title="Skype us">alexandru.comanescu83</a></li>
+                    </ul>
+                </div>
+                <div id="social" class="col">
+                    <h5>Share site</h5>
+
+                    <div id="social-buttons"></div>
+                </div>
+                <div id="boring_stuff" class="col">
+                    <h5>Information</h5>
+                    <p>Copyright &copy 2014 We Are PSS - ProSoft Solution Company. All Rights Reserved</p>
+                </div>
+               
+
             </div>
+            
         </div>
 
         <div id="cover"></div>
-
+        <!--<div id="loader" class="loading">asdasdasdsa</div>-->
+        
         <script src="js/jquery-1.9.1.min.js"></script>
-        <script src="js/script.js"></script>   
+        <script src="js/script.js"></script>  
+        <script src="js/jquery.share.js"></script>  
     </body>
 </html>

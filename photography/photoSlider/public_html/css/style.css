@@ -1,15 +1,23 @@
 * {
     margin: 0px;
     padding: 0x;
-     -ms-user-select: none; /* IE 10+ */
-   -moz-user-select: -moz-none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-   user-select: none;
+    -ms-user-select: none; /* IE 10+ */
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 html,body{
     height: 100%;
 }
+a {
+    text-decoration: none;
+     color: #ff6633;
+}
+a:hover{
+    text-decoration: underline;
+}
+
 #header,#header-wrapper,#content,#content-wrapper,#footer,#footer-wrapper{
     z-index: 1;
 }
@@ -34,6 +42,9 @@ html,body{
     position: relative;
     float: left;
 }
+#title:hover{
+    cursor: pointer;
+}
 /*menu CSS*/
 #menu{
     margin-top: 60px;
@@ -42,7 +53,6 @@ html,body{
     font-size: 20px;
     position: relative;
     float: right;
-    z-index: 199;
 }
 #menu ul{
     list-style-type: none;
@@ -68,7 +78,7 @@ a{
     width: 90px;
     box-shadow: 0 5px 20px black;
 }
-hr{
+#menu hr{
     margin-left: -30px;
     background-color: #ff9900;
     height: 2px;
@@ -89,13 +99,13 @@ hr{
 .hidden{
     display:none;
 }
-li:hover{
+#menu li:hover{
     cursor: pointer;
     color: #ff6633;
 }
 /*content CSS*/
 #content{
-   
+
     height: 450px;
     position: relative;
     color: #ff9900;   
@@ -113,7 +123,7 @@ li:hover{
 /*contact form*/
 #contact{
     display: none;
-    
+
 }
 #contact-wrapper{
     margin-left: 150px;
@@ -131,7 +141,7 @@ li:hover{
 }
 #contact-table{
     width : 450px;
-   
+
 }
 table td{
     padding-bottom: 7px;
@@ -148,15 +158,52 @@ table input{
     position: fixed; 
     background: black;
     color: #ff9900; 
-
+}
+#footer h5{
+    font-size: 22px;
+    
+}
+#footer hr{
+    margin-top: 170px;
+    width: 700px;
+    margin-left: 270px;
+    margin-right: 200px;
+    background-color: #ff9900;
+    height: 2px;
+    border: none;  
 }
 #footer-wrapper{
-    width: 1000px;
+    font-family: Calibri;
+    font-size: 14px;
+    width: 1500px;
     margin: 0 auto;
-    overflow: hidden;
-    padding-left: 650px;
+    padding-left: 150px;
     padding-top: 20px;
-    z-index: 30;
+}
+.col{
+    margin-top: 30px;
+    position: absolute;
+    width: 330px;
+}
+.col ul{
+    margin-top: 15px;
+    list-style-type: none;
+    padding-left: 0px !important;
+}
+#footer-contact{
+    margin-left: 100px;
+}
+#social{
+    margin-left: 500px;
+}
+#boring_stuff{
+    margin-left: 900px;
+}
+#boring_stuff p{
+    margin-top: 15px;
+}
+#social-buttons{
+    margin-top: 15px;
 }
 /*images CSS*/
 .image{
@@ -221,7 +268,6 @@ table input{
     position: absolute;
     cursor: pointer;
     right: 0;
-
 }
 /*page navigation*/
 #page-left-div {
@@ -280,31 +326,17 @@ table input{
     top:-20px;
     right: -18px;
 }
-
-#social-buttons {
-    height: 300px;
-    transition:             opacity 1000ms ease;
-        -moz-transition:    opacity 1000ms ease;
-        -ms-transition:     opacity 1000ms ease;
-        -o-transition:      opacity 1000ms ease;
-        -webkit-transition: opacity 1000ms ease;
-    width: 90px;
+/*contact css*/
+#comm-txt-area{
+    resize:none;
+}
+.err-message{
+    color: red;
 }
 
-.fb-like,
-.g-plusone-frame {
-    margin: 10px 0 10px 3px;   
-}
-
-.g-plusone-frame {
-    display: inline-block;
-}
-
-.twitter-share-button {
-    margin: 10px 0;
-}
-
-.fade {
-    opacity: 0 !important;
+#loader {
+    position: fixed;
+    top:200px;
+    font-size:40px;
 }
 
