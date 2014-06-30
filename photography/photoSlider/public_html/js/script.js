@@ -20,15 +20,15 @@ $(document).ready(function() {
     });
 });
 
-function loadPages(){
-     $(window).on('hashchange', function() {
+function loadPages() {
+    $(window).on('hashchange', function() {
         loadPage(window.location.hash);
     });
-    loadPage(window.location.hash);   
+    loadPage(window.location.hash);
 }
 
-function showGallery(){
-     $('#gallery').hover(function() {
+function showGallery() {
+    $('#gallery').hover(function() {
         $('.tree').stop().fadeIn(200);
     }, function() {
         $('.tree').stop().fadeOut(200);
@@ -39,7 +39,11 @@ function loadPage(hash) {
 
     $('#contact').hide();
     $('.image').remove();
+    
+    console.log(hash);
     switch (hash) {
+        
+        
 
         case'':
             loadPictures('home');
@@ -53,13 +57,16 @@ function loadPage(hash) {
         case '#travel':
             loadPictures('travel');
             break;
+        case '#orto':
+            loadPictures('orto');
+            break;
         default:
             break;
     }
 }
 
 function loadPictures(category) {
-  
+
     $.ajax({
         type: "POST",
         dataType: "text",
@@ -83,7 +90,7 @@ function loadPictures(category) {
         maxPages[category] = parseInt(gNbr / gNbrInPage)
         if (gNbr % gNbrInPage) {
             maxPages[category] += 1;
-        }     
+        }
         $('#page-left-div').hide();
         $('#page-right-div').hide();
         if (maxPages[category] == 1) {
@@ -107,6 +114,9 @@ function nextPage() {
             break;
         case '#travel':
             category = 'travel';
+            break;
+        case '#orto':
+            category = 'orto';
             break;
     }
     if (gPage < maxPages[category]) {
@@ -135,6 +145,9 @@ function previousPage() {
             break;
         case '#travel':
             category = 'travel';
+            break;
+        case '#orto':
+            category = 'orto';
             break;
     }
     if (gPage > 1) {
@@ -175,7 +188,7 @@ function closeImage() {
     $('#cover').fadeOut(200);
 }
 
-function handleKeyDownEvent() { 
+function handleKeyDownEvent() {
     $(document).keydown(function(e) {
         if (e.keyCode === 27) { //escape 
             closeImage();
@@ -200,6 +213,9 @@ function getPath() {
             break;
         case '#travel':
             path = 'img/travel';
+            break;
+        case '#orto':
+            path = 'img/orto';
             break;
     }
     return path;
@@ -266,6 +282,9 @@ function setPageHash(name) {
         case 'contact':
             window.location.hash = 'contact';
             break;
+        case 'orto':
+            window.location.hash = 'orto';
+            break;
         default:
             break;
     }
@@ -274,22 +293,23 @@ function setPageHash(name) {
 function showSocialButtons() {
 
     $('#social-buttons').share({
-        networks: ['googleplus','facebook','twitter','linkedin']
-        //theme: 'square'
-        //urlToShare: 'http://www.url-name.com',
-        //affix: 'center bottom'
+        networks: ['googleplus', 'facebook', 'twitter', 'linkedin']
+                //theme: 'square'
+                //urlToShare: 'http://www.url-name.com',
+                //affix: 'center bottom'
     });
 
-};
-function validateEmail(){
+}
+;
+function validateEmail() {
     $('#first-name').focusout(function(e) {
         e.preventDefault();
         console.log($('#first-name').val().length);
-        if($('#first-name').val().length == 0){
+        if ($('#first-name').val().length == 0) {
             $('#first-name').addClass('err-message');
             $('#first-name').val('Enter name');
         }
-        else{
+        else {
             $(this).removeClass('err-message');
         }
     });

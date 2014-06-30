@@ -14,6 +14,9 @@ if (isset($_POST['type'])) {
         case 'travel':
             $dir = "img/travel";
             break;
+         case 'orto':
+            $dir = "img/orto";
+            break;
 
         default:
             break;
